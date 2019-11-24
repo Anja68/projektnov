@@ -2,11 +2,22 @@ import flask
 import random
 import model
 
+
+
+from flask import url_for, render_template
+
 app = flask.Flask(__name__)
+db = model.db
+
+db.create_all()
 
 
 @app.route("/")
 def index():
+    user = model.User(id=1, username="Maxi", email="maxi@hallo.at")
+    db.add(user)
+    db.commit()
+
     return flask.render_template("index.html")
 
 
