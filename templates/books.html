@@ -1,0 +1,40 @@
+{% extends "frame.html" %}
+
+{% block title %}
+books
+{% endblock title %}
+
+{% block css %}
+
+{% endblock css %}
+
+
+{% block content %}
+
+<h1>books</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Bookdescription</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for book in books %}
+    <tr>
+        <th scope="row">{{book.id}}</th>
+        <td>{{book.title}}</td>
+        <td>{{book.bookdescription}}</td>
+        <td><a href="/books/{{book.id}}/delete">delete</a></td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock content %}
+

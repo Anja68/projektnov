@@ -1,0 +1,22 @@
+{% extends "frame.html" %}
+
+{% block title %}
+    Book delete
+{% endblock title %}
+
+{% block css %}
+
+{% endblock css %}
+
+
+{% block content %}
+
+<h1>Delete Book</h1>
+<p>Would you really like to delete the following books?</p>
+<p>{{book.title}}, {{book.bookdescription}}</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+{% endblock content %}
