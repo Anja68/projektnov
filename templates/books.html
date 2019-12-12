@@ -20,6 +20,7 @@ books
         <th scope="col">Title</th>
         <th scope="col">Bookdescription</th>
         <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
     </tr>
     </thead>
     <tbody>
@@ -29,6 +30,7 @@ books
         <td>{{book.title}}</td>
         <td>{{book.bookdescription}}</td>
         <td><a href="/books/{{book.id}}/delete">delete</a></td>
+        <td><a href="/books/{{book.id}}/edit">edit</a></td>
 
     </tr>
     {% endfor %}

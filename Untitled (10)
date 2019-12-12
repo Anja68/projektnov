@@ -1,0 +1,25 @@
+def require_session_token(func):
+    """Decorator to require authentication to access routes"""
+
+def wrapper(*args, **kwargs):
+    session_token = flask.request.cookies.get("session_token")
+    redirect_url = flask.request.path or '/'
+
+    if not session_token:
+        app.logger.error('no token in request')
+        return flask.redirect(flask.url_for('login', redirectTo=redirect_url))
+    user = db.query(model.User).filter_by(session_token=session_token).filter(
+        model.User.session_expiry_datetime >= datetime.datetime.now()).first()
+
+    if not user:
+        app.logger.error(f'token {session_token} not valid')
+        return flask.redirect(flask.url_for('login', redirectTo=redirect_url))
+
+    app.logger.info(
+        f'authenticated user {user.username} with token {user.session_token} valid until {user.session_expiry_datetime.isoformat()}')
+    flask.request.user = user
+    return func(*args, **kwargs)
+
+# Renaming the function name:
+wrapper.__name__ = func.__name__
+return wrapper

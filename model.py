@@ -9,9 +9,11 @@ db = sqla_wrapper.SQLAlchemy(os.getenv("DATABASE_URL", "sqlite:///{SQLITE_FILE}"
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String, unique=True)
-    email = db.Column(db.String, unique=True)
-
+    username = db.Column(db.String, unique=True, nullable=False)
+    email = db.Column(db.String, unique=True, nullable=False)
+    password = db.Column(db.String, nullable=False)
+    session_token = db.Column(db.String, nullable=True)
+    session_expiry_datetime = db.Column(db.DateTime, nullable=True)
 
 class Receipe (db.Model):
     id = db.Column (db.Integer, primary_key=True)
