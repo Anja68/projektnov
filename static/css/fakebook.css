@@ -1,0 +1,109 @@
+#fakebook {
+color: black;
+background-color: black;
+padding: 50px;
+width: 100%;
+transition-property: background-color;
+transition-duration: 1s;
+transition-timing-function: linear;
+}
+
+#fakebook:hover {
+background-color: white;
+}
+
+#blau {
+color: white;
+background-color: black;
+}
+
+.eigenschaften {
+background-color: #99ccff;
+  width: 600px;
+  border: 5px dotted black;
+  padding: 50px;
+  margin: 10px;
+}
+
+th {
+    color: #99ccff;
+    background-color: black;
+    padding: 10px 10px 10px 10px;
+    width: 600px;
+margin: 10px;
+}
+
+td {
+color: black;
+background-color: #99ccff;
+padding: 10px 10px 10px 10px;
+width: 600px;
+margin: 10px;
+}
+
+table {
+width: 600px;
+margin: 10px;
+padding: 10px 10px 10px 10px;
+
+}
+
+
+.divhover {
+width: 100%;
+height: 300px;
+border: 5px solid black;
+padding: 5px 20px 20px 20px;
+margin-left: auto;
+margin-right: auto;
+}
+.divhover:hover {
+width: 100%x;
+border: 5px dotted;
+background-color: #99ccff;
+margin-left: auto;
+margin-right: auto;
+}
+
+#profil {
+text-align: center;
+}
+
+.kvadrat {
+    height: 100px;
+    width: 100px;
+    background-color: #99ccff;
+    /* premik na poljuben del zaslona */
+    position: relative;
+    left: 100px;
+    top: 180px;
+}
+.kvadrat2 {
+    height: 100px;
+    width: 100px;
+    background-color: #99ccff;
+    /* postavitev na sredino stran zaslona */
+    margin-left: auto;
+    margin-right: auto;
+}
+.kvadrat3 {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    /* vzporedni kvadrati */
+    margin: 5px;
+    display: inline-block;
+    }
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: no-repeat 50%/100% 100%;
+    color: #000000;
+}
+
+#fotomodal {
+width: 100%;
+
+}

@@ -1,3 +1,14 @@
 body {
 background.color: red;
 }
+
+.row {
+padding: 20px;
+margin: 40px;
+}
+
+.table table-striped{
+padding: 20px;
+margin: 40px;
+}
+

@@ -5,14 +5,13 @@
 
 {% block css %}
 
-<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/fakebook.css">
 
 {% endblock css %}
 
 {% block content %}
 
 <h1>Mein Fakebook</h1>
-<p>Hello, index.html here!</p>
 <p>{{myname}}</p>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -44,6 +43,53 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <h1 id="fakebook">FAKEBOOK</h1>
+
+    <div class="divhover">
+        <h2 id="profil">Profile Anja </h2>
+        <a target="_blank" href="https://www.w3schools.com/html/html_basic.asp">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUcPQS1olj6-tKhgyfMzUDF3JhTkQ7ScnCe-5ACV_Sus6c1Q0c"></a>
+    </div>
+    <div class="eigenschaften"><h3>Facts about me:</h3></div>
+    <ul class="eigenschaften">
+        <li>I love the colour green.</li>
+        <li>I also love the colour blue.</li>
+        <li>Yellow is also a great colour.</li>
+        <li><a href="https://media-cdn.tripadvisor.com/media/photo-s/08/7e/d2/09/bars-foto.jpg" download>Download</a>
+        </li>
+    </ul>
+
+    <table rules="all" frame="box">
+        <tr>
+            <th><a target="_top" href="https://www.w3schools.com/tags/ref_attributes.asp">Headline 1</a></th>
+            <th>Headline 2</th>
+            <th>Headline 3</th>
+            <th>Headline 4</th>
+        </tr>
+        <tr>
+            <td>Datensatz 1</td>
+            <td>Datensatz 2</td>
+            <td>Datensatz 3</td>
+            <td>Datensatz 4</td>
+        </tr>
+    </table>
+
+    <p id="blau">Das ist ein Link zur Fakebook-Seite eines <a href="https://www.w3schools.com/html/html_formatting.asp">Freundes.</a>
+
+
+        <br>Das ist einfach ein bisschen Text.</p>
+
+</div>
 
 {% endblock content %}
 

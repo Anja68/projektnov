@@ -128,6 +128,10 @@ def index():
 
     return flask.render_template("index.html", myname="Anja")
 
+@app.route("/index")
+def index2():
+
+    return flask.render_template("index.html", myname="Anja")
 
 @app.route("/fakebook")
 def fakebook():

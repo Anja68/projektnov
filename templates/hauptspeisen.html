@@ -1,16 +1,32 @@
 {% extends "frame.html" %}
 {% block title %}
 Hauptspeisen
+
 {% endblock title %}
 
 {% block css %}
 
-<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/index.css">
 
 {% endblock css %}
 
 {% block content %}
+<div class="container-fluid">
+    <h1>Alle Hauptspeisen <span class="badge badge-secondary">under construction</span></h1>
+    <span class="d-block p-2 bg-dark text-white">
+    <div class="row">
+        <div class="col">
+            Vegetarisch
+        </div>
+        <div class="col">
+            Vegan
+        </div>
+        <div class="col">
+            Mit Fleisch
+        </div>
+    </div>
+       </span>
+</div>
 
-<h1>Alle Hauptspeisen</h1>
 
 {% endblock content %}
